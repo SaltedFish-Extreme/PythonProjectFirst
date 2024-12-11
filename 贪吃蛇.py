@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 
 
+import random
+import sys
+
 # 导入必要的模块
 import pygame
-import sys
-import random
 from pygame.locals import *
 
 # 定义颜色变量，使用RGB值
@@ -13,10 +14,12 @@ redColour = pygame.Color(255, 0, 0)
 blackColour = pygame.Color(0, 0, 0)
 whiteColour = pygame.Color(255, 255, 255)
 
+
 def gameOver():
     """结束游戏函数，退出pygame并退出系统"""
     pygame.quit()
     sys.exit()
+
 
 def main():
     """主函数，用于运行贪吃蛇游戏"""
@@ -113,6 +116,7 @@ def main():
             gameOver()
 
         fpsClock.tick(5)  # 控制游戏速度，每秒帧数为5
+
 
 if __name__ == "__main__":
     main()  # 运行主函数
